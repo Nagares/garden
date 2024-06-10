@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import {
+  ChakraProvider,
+  theme,
+  ThemeConfig
+} from "@chakra-ui/react"
 import './App.css';
+import './i18n'; 
 
+import Navbar from "./components/NavBar";
+import Content from "./components/Content";
 function App() {
+
+  // set theme configuration
+  const config: ThemeConfig = {
+    initialColorMode: 'system',
+    useSystemColorMode: true,
+  }
+  theme.config = config;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Navbar />
+      <Content/>
+    </ChakraProvider >
   );
 }
 

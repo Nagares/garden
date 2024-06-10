@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "Professional Gardening Services",
+    "language":"Language",
+    "contact": {
+      "phone1": "(095) 626-61-84",
+      "phone2": "(067) 461-64-36"
+    }
+  },
+  "services": {
+    "title": "Garden Care Services",
+    "pruning": "Pruning of trees and shrubs (shaping, sanitary, rejuvenating, decorative)",
+    "pest_control": "Control of diseases and pests. Treatment with fungicides, insecticides",
+    "scarification": "Scarification",
+    "lawn_mowing": "Lawn mowing",
+    "other": "Many other things for garden care, lawn, flower bed"
+  },
+  "calendar": {
+    "title": "Gardener's Calendar",
+    "winter_end": {
+      "title": "End of Winter",
+      "section1": "Garden",
+      "tasks": [
+        "Pruning of fruit trees (shaping, sanitary, rejuvenating)",
+        "Preparation of planting pits for seedlings",
+        "Determination of soil pH and mechanical soil composition",
+        "Compilation of a plan for treatment with insecticides and fungicides for the season",
+        "Compilation of a plan for fertilizing plants for the season"
+      ]
+    },
+    "spring": {
+      "title": "Spring",
+      "section1": "Garden",
+      "tasks": [
+        "Pruning of trees and shrubs (shaping, sanitary, rejuvenating, decorative)",
+        "Treatment of frostbite, bark damage",
+        "First treatment with contact fungicides",
+        "Planting seedlings",
+        "Tree grafting",
+        "Control of diseases and pests. Treatment with fungicides, insecticides",
+        "Root feeding with mineral or organic fertilizers",
+        "Hedge trimming",
+        "Mulching the soil with organic and inorganic materials"
+      ]
+    },
+    "summer": {
+      "title": "Summer",
+      "section1": "Garden",
+      "tasks": [
+        "Pruning of trees and shrubs (sanitary, decorative)",
+        "Work with green shoots (pinching, setting the correct angle for future skeletal branches)",
+        "Planting seedlings",
+        "Control of diseases and pests. Treatment with fungicides, insecticides",
+        "Root and top dressing with fertilizers",
+        "Hedge trimming",
+        "Mulching the soil with organic and inorganic materials"
+      ]
+    },
+    "autumn": {
+      "title": "Autumn",
+      "section1": "Garden",
+      "tasks": [
+        "Planting seedlings",
+        "Pruning of trees and shrubs (sanitary, decorative)",
+        "Control of diseases and pests. Treatment with fungicides, insecticides",
+        "Root and top dressing with fertilizers",
+        "Hedge trimming",
+        "Mulching the soil with organic and inorganic materials",
+        "Preparation of planting pits for spring seedlings",
+        "Preparing plants for winter",
+        "Treatment with contact fungicides",
+        "Installation of protection for young tree stems from frost and animals",
+        "Protection of plant crowns from snow sticking"
+      ]
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "address": "Kyiv, Kyiv region",
+    "email": "gass9773@gmail.com",
+    "phones": [
+      "(095) 626-61-84",
+      "(067) 461-64-36"
+    ]
+  }
+}
