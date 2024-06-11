@@ -135,5 +135,15 @@
       "(095) 626-61-84",
       "(067) 461-64-36"
     ]
+  },
+  "footer": {
+    "companyName": "Your Company",
+    "address": "Kyiv, Kyiv region",
+    "email": "gass9773@gmail.com",
+    "phones": [
+      "(095) 626-61-84",
+      "(067) 461-64-36"
+    ],
+    "copyright": "© Hanna Kovbasiuk."
   }
 }

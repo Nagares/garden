@@ -10,6 +10,9 @@ import {
 
   import { useTranslation } from 'react-i18next';
   import  CalendarComponent  from './CalendarComponent';
+  import  Contact from './Contact';
+  import  Footer from './Footer';
+
   function Content() {
 
     const { t } = useTranslation();
@@ -26,7 +29,7 @@ import {
           <Divider mt={5} />
           <Heading as='h2'>{t('services.title')}</Heading>
           <Box mt='3'>
-            <Text fontSize='xl'w='80%'  margin={"auto"} textAlign={[ 'justify' ]}>
+            <Text fontSize='xl'w='65%'  margin={"auto"} textAlign={[ 'justify' ]}>
               {t('services.pruning')+" "} 
               {t('services.pest_control')+" "} 
               {t('services.scarification')+" "} 
@@ -35,6 +38,10 @@ import {
           </Box>
           <Divider mt={5} mb={5} />
           <CalendarComponent />
+          <Contact/>
+          <Footer />
+
+
           
 
           

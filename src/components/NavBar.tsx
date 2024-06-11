@@ -63,7 +63,7 @@ const Navbar = () => {
           </HStack>
           <Flex alignItems={'center'}>
             <LanguageSwitcher></LanguageSwitcher>
-            <Button onClick={toggleColorMode} mr={4}>
+            <Button onClick={toggleColorMode} mr={4} color={useColorModeValue("#485727", "#c5d6a1")}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
             
