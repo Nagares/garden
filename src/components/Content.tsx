@@ -5,6 +5,7 @@ import {
   Divider,
   Text,
   useColorModeValue,
+  Image,
 } from "@chakra-ui/react";
 
 import { useTranslation } from "react-i18next";
@@ -18,6 +19,7 @@ function Content() {
 
   return (
     <Box
+      id="home"
       textAlign="center"
       fontSize="xl"
       color={useColorModeValue("#485727", "#c5d6a1")}
@@ -28,7 +30,15 @@ function Content() {
           {t("header.title")}
         </Heading>
         <Divider mt={5} mb={5} />
-        <BeforeAfter beforeImage={"image/1b.jpg"} afterImage={"image/1a.jpg"} />
+        <Box position="static">
+          <Image
+            borderRadius="md"
+            src={"image/"}
+            alt="img"
+            objectFit="cover"
+            h="300px"
+          />
+        </Box>
         <Heading as="h2">{t("services.title")}</Heading>
         <Box mt="3">
           <Text fontSize="xl" w="65%" margin={"auto"} textAlign={["justify"]}>
@@ -39,8 +49,10 @@ function Content() {
             {t("services.other")}
           </Text>
         </Box>
+        <BeforeAfter beforeImage={"image/2b.jpg"} afterImage={"image/2a.jpg"} />
         <Divider mt={5} mb={5} />
         <CalendarComponent />
+        <BeforeAfter beforeImage={"image/1b.jpg"} afterImage={"image/1a.jpg"} />
         <Contact />
         <Footer />
       </Grid>

@@ -137,7 +137,7 @@
     ]
   },
   "footer": {
-    "companyName": "Ваша компания",
+    "companyName": "Идеальный сад",
     "address": "Киев, Киевская обл.",
     "email": "gass9773@gmail.com",
     "phones": [
@@ -149,5 +149,8 @@
   "beforeafter": {
     "before": "До",
     "after": "После"
+  },
+  "logo": {
+    "logo": "Идеальный сад"
   }
 }

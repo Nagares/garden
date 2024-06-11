@@ -24,58 +24,66 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
     md: "row",
   });
   return (
-    <HStack
-      spacing={4}
-      position="static"
-      p={4}
+    <Box
+      w="100%"
       m={"auto"}
-      flexDirection={flexDirection}
+      pt="8"
+      bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
     >
-      <Box position="static">
-        <Image
-          borderRadius="md"
-          src={beforeImage}
-          alt="Before"
-          objectFit="cover"
-          boxSize="500px"
-        />
-        <Text
-          position="relative"
-          bottom="20px"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          color={useColorModeValue("#c5d6a1", "#485727")}
-          bg={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
-          px={3}
-          py={1}
-          borderRadius="md"
-        >
-          {t("beforeafter.before")}
-        </Text>
-      </Box>
-      <Box position="static">
-        <Image
-          src={afterImage}
-          alt="After"
-          objectFit="cover"
-          boxSize="500px"
-          borderRadius="md"
-        />
-        <Text
-          position="relative"
-          bottom="20px"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          color={useColorModeValue("#c5d6a1", "#485727")}
-          bg={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
-          px={3}
-          py={1}
-          borderRadius="md"
-        >
-          {t("beforeafter.after")}
-        </Text>
-      </Box>
-    </HStack>
+      <HStack
+        spacing={4}
+        position="static"
+        p={4}
+        m={"auto"}
+        flexDirection={flexDirection}
+        justifyContent={'center'}
+      >
+        <Box position="static">
+          <Image
+            borderRadius="md"
+            src={beforeImage}
+            alt="Before"
+            objectFit="cover"
+            boxSize="500px"
+          />
+          <Text
+            position="relative"
+            bottom="18px"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            color={useColorModeValue("#c5d6a1", "#485727")}
+            bg={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
+            px={3}
+            py={1}
+            borderRadius="md"
+          >
+            {t("beforeafter.before")}
+          </Text>
+        </Box>
+        <Box position="static">
+          <Image
+            src={afterImage}
+            alt="After"
+            objectFit="cover"
+            boxSize="500px"
+            borderRadius="md"
+          />
+          <Text
+            position="relative"
+            bottom="18px"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            color={useColorModeValue("#c5d6a1", "#485727")}
+            bg={useColorModeValue("blackAlpha.700", "whiteAlpha.700")}
+            px={3}
+            py={1}
+            borderRadius="md"
+          >
+            {t("beforeafter.after")}
+          </Text>
+        </Box>
+      </HStack>
+    </Box>
   );
 };
 

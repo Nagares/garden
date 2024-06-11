@@ -137,7 +137,7 @@
     ]
   },
   "footer": {
-    "companyName": "Your Company",
+    "companyName": "Perfect Garden",
     "address": "Kyiv, Kyiv region",
     "email": "gass9773@gmail.com",
     "phones": [
@@ -149,5 +149,8 @@
   "beforeafter": {
     "before": "Before",
     "after": "After"
+  },
+  "logo": {
+      "logo": "Perfect Garden"
   }
 }

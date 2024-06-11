@@ -211,7 +211,7 @@ interface FeatureProps {
 const Feature: React.FC<FeatureProps> = ({ title, desc }) => {
   return (
     <Box
-      p={6}
+      p={"5vw"}
       boxShadow="sm"
       rounded="md"
       bg={useColorModeValue("gray.50", "gray.900")}

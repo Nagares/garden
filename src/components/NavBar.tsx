@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Flex,
@@ -16,27 +16,40 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  useBreakpointValue
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-import  LanguageSwitcher  from './LanguageSwitcher';
-const Links = ['Home', 'About', 'Contact'];
+  useBreakpointValue,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
+const Links = [
+  { name: "Home", id: "home" },
+  { name: "Contacts", id: "contacts" },
+];
 
-const NavLink = ({ children }: { children: React.ReactNode }) => (
+const NavLink = ({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href: string;
+}) => (
   <Link
     px={2}
     py={1}
-    rounded={'md'}
+    rounded={"md"}
     _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={'#'}>
+    href={href}
+  >
     {children}
   </Link>
 );
-
 const Navbar = () => {
+  const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const flexDirection: "column" | "row" | undefined = useBreakpointValue({
@@ -46,52 +59,86 @@ const Navbar = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} color={useColorModeValue("#485727", "#c5d6a1")} position="fixed" w='100%' >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} px={8}>
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        color={useColorModeValue("#485727", "#c5d6a1")}
+        position="fixed"
+        w="100%"
+        zIndex={"10"}
+      >
+        <Flex
+          h={16}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          px={4}
+        >
           <IconButton
-            size={'md'}
+            size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+          <HStack spacing={8} alignItems={"center"}>
+            <HStack>
+              <Box>
+                <Image
+                  src={"image/logo.jpg"}
+                  alt="After"
+                  objectFit="cover"
+                  boxSize="35px"
+                  borderRadius="md"
+                />
+              </Box>
+              <Box as="b">{t("logo.logo")}</Box>
+            </HStack>
             <HStack
-              as={'nav'}
+              as={"nav"}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+              display={{ base: "none", md: "flex" }}
+            >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.id} href={`#${link.id}`}>
+                  {link.name}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
+          <Flex alignItems={"center"}>
             <LanguageSwitcher />
-            <Button onClick={toggleColorMode} mr={4} color={useColorModeValue("#485727", "#c5d6a1")}>
-              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            <Button
+              onClick={toggleColorMode}
+              color={useColorModeValue("#485727", "#c5d6a1")}
+            >
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </Flex>
         </Flex>
-        <HStack justifyContent={'center'} boxShadow="lg" py={2} spacing="2vw" w='100%' bg={useColorModeValue('white', 'gray.800')} flexDirection={flexDirection} >
+        <HStack
+          justifyContent={"center"}
+          boxShadow="sm"
+          py={2}
+          spacing="2vw"
+          w="100%"
+          bg={useColorModeValue("white", "gray.800")}
+          flexDirection={flexDirection}
+        >
           <Box>(095) 626-61-84</Box>
           <Box>(067) 461-64-36</Box>
         </HStack>
-        
+
         {isOpen ? (
-          <Drawer
-            isOpen={isOpen}
-            placement="left"
-            onClose={onClose}
-          >
+          <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
             <DrawerOverlay>
               <DrawerContent>
                 <DrawerCloseButton />
                 <DrawerHeader>Menu</DrawerHeader>
                 <DrawerBody>
-                  <Stack as={'nav'} spacing={4}>
+                  <Stack as={"nav"} spacing={4}>
                     {Links.map((link) => (
-                      <NavLink key={link}>{link}</NavLink>
+                      <NavLink key={link.id} href={`#${link.id}`}>
+                        {link.name}
+                      </NavLink>
                     ))}
                   </Stack>
                 </DrawerBody>
