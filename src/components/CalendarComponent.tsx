@@ -6,6 +6,7 @@ import {
   Heading,
   List,
   ListItem,
+  useBreakpointValue,
   useColorModeValue,
   HStack,
   VStack,
@@ -14,6 +15,10 @@ import {
 
 const GardenerCalendar: React.FC = () => {
   const { t } = useTranslation();
+  const flexDirection: "column" | "row" | undefined = useBreakpointValue({
+    base: "column",
+    md: "row",
+  });
 
   return (
     <Box w="100%">
@@ -22,7 +27,11 @@ const GardenerCalendar: React.FC = () => {
       <VStack w="100%">
         <Heading as="h2">{t("calendar.winter_end.title")}</Heading>
         <Divider mt={5} mb={5} />
-        <HStack spacing="3vw" alignItems={"stretch"}>
+        <HStack
+          spacing="3vw"
+          alignItems={"stretch"}
+          flexDirection={flexDirection}
+        >
           <Feature
             title={t("calendar.winter_end.garden.title")}
             desc={[
@@ -55,7 +64,11 @@ const GardenerCalendar: React.FC = () => {
         <Heading as="h2" pb={15}>
           {t("calendar.spring.title")}
         </Heading>
-        <HStack spacing="3vw" alignItems={"stretch"}>
+        <HStack
+          spacing="3vw"
+          alignItems={"stretch"}
+          flexDirection={flexDirection}
+        >
           <Feature
             title={t("calendar.spring.garden.title")}
             desc={[
@@ -97,7 +110,11 @@ const GardenerCalendar: React.FC = () => {
       <VStack w="100%">
         <Heading as="h2">{t("calendar.summer.title")}</Heading>
         <Divider mt={5} mb={5} />
-        <HStack spacing="3vw" alignItems={"stretch"}>
+        <HStack
+          spacing="3vw"
+          alignItems={"stretch"}
+          flexDirection={flexDirection}
+        >
           <Feature
             title={t("calendar.summer.garden.title")}
             desc={[
@@ -141,7 +158,11 @@ const GardenerCalendar: React.FC = () => {
         <Heading as="h2" pb={15}>
           {t("calendar.autumn.title")}
         </Heading>
-        <HStack spacing="3vw" alignItems={"stretch"}>
+        <HStack
+          spacing="3vw"
+          alignItems={"stretch"}
+          flexDirection={flexDirection}
+        >
           <Feature
             title={t("calendar.autumn.garden.title")}
             desc={[

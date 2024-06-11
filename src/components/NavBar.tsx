@@ -16,6 +16,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  useBreakpointValue
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import  LanguageSwitcher  from './LanguageSwitcher';
@@ -38,11 +39,15 @@ const NavLink = ({ children }: { children: React.ReactNode }) => (
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const flexDirection: "column" | "row" | undefined = useBreakpointValue({
+    base: "column",
+    md: "row",
+  });
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} color={useColorModeValue("#485727", "#c5d6a1")} position="fixed" w='100%' px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} color={useColorModeValue("#485727", "#c5d6a1")} position="fixed" w='100%' >
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} px={8}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -62,14 +67,17 @@ const Navbar = () => {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <LanguageSwitcher></LanguageSwitcher>
+            <LanguageSwitcher />
             <Button onClick={toggleColorMode} mr={4} color={useColorModeValue("#485727", "#c5d6a1")}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
-            
           </Flex>
         </Flex>
-
+        <HStack justifyContent={'center'} boxShadow="lg" py={2} spacing="2vw" w='100%' bg={useColorModeValue('white', 'gray.800')} flexDirection={flexDirection} >
+          <Box>(095) 626-61-84</Box>
+          <Box>(067) 461-64-36</Box>
+        </HStack>
+        
         {isOpen ? (
           <Drawer
             isOpen={isOpen}

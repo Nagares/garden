@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         <Stack spacing={6}>
           <Box textAlign="center">
             <Text fontSize="xl" fontWeight="bold">{footerData.companyName}</Text>
-            <Divider my={4} borderColor="gray.700" />
+            <Divider my={5} borderColor="gray.500" />
           </Box>
           <Stack direction={['column', 'row']} spacing={8} justify="space-around">
             <Box textAlign="center">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </Box>
             <Box textAlign="center">
               <Icon as={FaEnvelope} w={6} h={6} mb={2} />
-              <Link href={`mailto:${footerData.email}`} color="blue.300">{footerData.email}</Link>
+              <Text><Link href={`mailto:${footerData.email}`} color="blue.300">{footerData.email}</Link></Text>
             </Box>
             <Box textAlign="center">
               <Icon as={FaPhoneAlt} w={6} h={6} mb={2} />

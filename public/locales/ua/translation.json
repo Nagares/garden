@@ -145,5 +145,9 @@
             "(067) 461-64-36"
         ],
         "copyright": "© Hanna Kovbasiuk."
+    },
+    "beforeafter": {
+        "before": "До",
+        "after": "Після"
     }
 }
