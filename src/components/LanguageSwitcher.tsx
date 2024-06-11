@@ -6,6 +6,7 @@ import {
   MenuList,
   MenuItem,
   Button,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 const LanguageSwitcher: React.FC = () => {
@@ -17,10 +18,10 @@ const LanguageSwitcher: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Menu>
-      <MenuButton as={Button} mr={2} rightIcon={<span>▼</span>}>
+      <MenuButton as={Button} mr={2} color={useColorModeValue("#485727", "#c5d6a1")}rightIcon={<span>▼</span>}>
       {t('header.language')}
       </MenuButton>
-      <MenuList>
+      <MenuList color={useColorModeValue("#485727", "#c5d6a1")}>
         <MenuItem onClick={() => changeLanguage('ua')}>Українська</MenuItem>
         <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
         <MenuItem onClick={() => changeLanguage('ru')}>Русский</MenuItem>

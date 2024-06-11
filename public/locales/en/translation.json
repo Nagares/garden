@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "Professional Gardening Services",
-    "language":"Language",
+    "language": "Language",
     "contact": {
       "phone1": "(095) 626-61-84",
       "phone2": "(067) 461-64-36"
@@ -15,64 +15,117 @@
     "lawn_mowing": "Lawn mowing",
     "other": "Many other things for garden care, lawn, flower bed"
   },
-  "calendar": {
-    "title": "Gardener's Calendar",
-    "winter_end": {
-      "title": "End of Winter",
-      "section1": "Garden",
-      "tasks": [
-        "Pruning of fruit trees (shaping, sanitary, rejuvenating)",
-        "Preparation of planting pits for seedlings",
-        "Determination of soil pH and mechanical soil composition",
-        "Compilation of a plan for treatment with insecticides and fungicides for the season",
-        "Compilation of a plan for fertilizing plants for the season"
-      ]
-    },
-    "spring": {
-      "title": "Spring",
-      "section1": "Garden",
-      "tasks": [
-        "Pruning of trees and shrubs (shaping, sanitary, rejuvenating, decorative)",
-        "Treatment of frostbite, bark damage",
-        "First treatment with contact fungicides",
-        "Planting seedlings",
-        "Tree grafting",
-        "Control of diseases and pests. Treatment with fungicides, insecticides",
-        "Root feeding with mineral or organic fertilizers",
-        "Hedge trimming",
-        "Mulching the soil with organic and inorganic materials"
-      ]
-    },
-    "summer": {
-      "title": "Summer",
-      "section1": "Garden",
-      "tasks": [
-        "Pruning of trees and shrubs (sanitary, decorative)",
-        "Work with green shoots (pinching, setting the correct angle for future skeletal branches)",
-        "Planting seedlings",
-        "Control of diseases and pests. Treatment with fungicides, insecticides",
-        "Root and top dressing with fertilizers",
-        "Hedge trimming",
-        "Mulching the soil with organic and inorganic materials"
-      ]
-    },
-    "autumn": {
-      "title": "Autumn",
-      "section1": "Garden",
-      "tasks": [
-        "Planting seedlings",
-        "Pruning of trees and shrubs (sanitary, decorative)",
-        "Control of diseases and pests. Treatment with fungicides, insecticides",
-        "Root and top dressing with fertilizers",
-        "Hedge trimming",
-        "Mulching the soil with organic and inorganic materials",
-        "Preparation of planting pits for spring seedlings",
-        "Preparing plants for winter",
-        "Treatment with contact fungicides",
-        "Installation of protection for young tree stems from frost and animals",
-        "Protection of plant crowns from snow sticking"
-      ]
-    }
+    "calendar": {
+      "title": "Gardening Calendar",
+      "winter_end": {
+        "title": "End of Winter",
+        "garden": {
+          "title": "Garden",
+          "pruning": "Pruning fruit trees",
+          "pit_preparation": "Preparing planting pits",
+          "soil_ph": "Determining soil pH",
+          "pesticides_plan": "Pesticide and fungicide treatment plan",
+          "fertilizer_plan": "Fertilizer plan"
+        },
+        "flower_bed": {
+          "title": "Flower Bed",
+          "soil_ph": "Determining soil pH"
+        },
+        "lawn": {
+          "title": "Lawn",
+          "scarification": "Scarification needs",
+          "soil_ph": "Determining soil pH"
+        }
+      },
+      "spring": {
+        "title": "Spring",
+        "garden": {
+          "title": "Garden",
+          "pruning": "Pruning trees and shrubs",
+          "frost_damage_treatment": "Treating frost damage",
+          "first_fungicide_treatment": "First fungicide treatment",
+          "planting": "Planting seedlings",
+          "grafting": "Grafting trees",
+          "pest_control": "Pest control",
+          "fertilization": "Root fertilization",
+          "pruning_hedges": "Trimming hedges",
+          "mulching": "Mulching soil"
+        },
+        "flower_bed": {
+          "title": "Flower Bed",
+          "cleanup": "Cleaning up last year's growth",
+          "planting": "Planting flowers",
+          "fertilization": "Fertilizing",
+          "weed_removal": "Weed removal",
+          "mulching": "Mulching soil"
+        },
+        "lawn": {
+          "title": "Lawn",
+          "scarification": "Scarification",
+          "overseeding": "Overseeding",
+          "mowing": "Mowing",
+          "weed_removal": "Weed removal",
+          "fertilization": "Fertilization",
+          "lawn_repair": "Lawn repair"
+        }
+      },
+      "summer": {
+        "title": "Summer",
+        "garden": {
+          "title": "Garden",
+          "pruning": "Pruning trees and shrubs",
+          "green_works": "Green works",
+          "planting": "Planting seedlings",
+          "pest_control": "Pest control",
+          "fertilization": "Root and top fertilization",
+          "pruning_hedges": "Trimming hedges",
+          "mulching": "Mulching soil"
+        },
+        "flower_bed": {
+          "title": "Flower Bed",
+          "planting": "Planting flowers",
+          "fertilization": "Fertilizing",
+          "weed_removal": "Weed removal",
+          "mulching": "Mulching soil"
+        },
+        "lawn": {
+          "title": "Lawn",
+          "overseeding": "Overseeding",
+          "mowing": "Mowing",
+          "weed_removal": "Weed removal",
+          "fertilization": "Fertilization",
+          "lawn_repair": "Lawn repair"
+        }
+      },
+      "autumn": {
+        "title": "Autumn",
+        "garden": {
+          "title": "Garden",
+          "planting": "Planting seedlings",
+          "pruning": "Pruning trees and shrubs",
+          "pest_control": "Pest control",
+          "fertilization": "Root and top fertilization",
+          "pruning_hedges": "Trimming hedges",
+          "mulching": "Mulching soil",
+          "pit_preparation": "Preparing planting pits",
+          "winter_preparation": "Preparing plants for winter"
+        },
+        "flower_bed": {
+          "title": "Flower Bed",
+          "planting": "Planting flowers",
+          "fertilization": "Fertilizing",
+          "weed_removal": "Weed removal",
+          "mulching": "Mulching soil"
+        },
+        "lawn": {
+          "title": "Lawn",
+          "overseeding": "Overseeding",
+          "mowing": "Mowing",
+          "weed_removal": "Weed removal",
+          "fertilization": "Fertilization",
+          "lawn_repair": "Lawn repair"
+        }
+      }
   },
   "contacts": {
     "title": "Contacts",
