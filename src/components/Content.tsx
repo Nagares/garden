@@ -5,7 +5,6 @@ import {
   Divider,
   Text,
   useColorModeValue,
-  Image,
 } from "@chakra-ui/react";
 
 import { useTranslation } from "react-i18next";
@@ -65,8 +64,6 @@ function Content() {
         <Divider mt={10} mb={5} />
         <BeforeAfter beforeImage={"image/1b.jpg"} afterImage={"image/1a.jpg"} />
         <Divider mt={10} mb={5} />
-        <Contact />
-        <Footer />
       </Grid>
     </Box>
   );

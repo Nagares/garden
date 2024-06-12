@@ -18,14 +18,17 @@ import {
   DrawerCloseButton,
   useBreakpointValue,
   Image,
-  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Link as RouterLink } from "react-router-dom";
+
 const Links = [
   { name: "Home", id: "home" },
   { name: "Contacts", id: "contacts" },
+  { name: "About Us", id: "about-us" },
+  { name: "Services", id: "services" },
 ];
 
 const NavLink = ({
@@ -36,6 +39,8 @@ const NavLink = ({
   href: string;
 }) => (
   <Link
+    as={RouterLink}
+    to={href}
     px={2}
     py={1}
     rounded={"md"}
@@ -43,11 +48,11 @@ const NavLink = ({
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={href}
   >
     {children}
   </Link>
 );
+
 const Navbar = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -99,7 +104,7 @@ const Navbar = () => {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <NavLink key={link.id} href={`#${link.id}`}>
+                <NavLink key={link.id} href={`/${link.id}`}>
                   {t(`menu.${link.id}`)}
                 </NavLink>
               ))}
@@ -137,7 +142,7 @@ const Navbar = () => {
                 <DrawerBody>
                   <Stack as={"nav"} spacing={4}>
                     {Links.map((link) => (
-                      <NavLink key={link.id} href={`#${link.id}`}>
+                      <NavLink key={link.id} href={`/${link.id}`}>
                         {t(`menu.${link.id}`)}
                       </NavLink>
                     ))}
