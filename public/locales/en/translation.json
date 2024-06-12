@@ -151,6 +151,10 @@
     "after": "After"
   },
   "logo": {
-      "logo": "Perfect Garden"
+    "logo": "Perfect Garden"
+  },
+  "menu": {
+    "home": "Home",
+    "contacts": "Contacts"
   }
 }

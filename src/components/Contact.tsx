@@ -17,7 +17,12 @@ const Contacts: React.FC = () => {
   const contacts = t("contacts", { returnObjects: true }) as Contacts;
 
   return (
-    <Box id="contacts" bgImg={"image/gr.jpg"} objectFit="cover">
+    <Box
+      id="contacts"
+      bgImg={"image/gr.jpg"}
+      objectFit="cover"
+      bgPosition="center"
+    >
       <Box
         w="100%"
         p={"5vw"}

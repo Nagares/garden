@@ -28,7 +28,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
       w="100%"
       m={"auto"}
       pt="8"
-      bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
+      bg={useColorModeValue("#e1e6e1", "#192b25")}
     >
       <HStack
         spacing={4}
@@ -36,7 +36,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
         p={4}
         m={"auto"}
         flexDirection={flexDirection}
-        justifyContent={'center'}
+        justifyContent={"center"}
       >
         <Box position="static">
           <Image

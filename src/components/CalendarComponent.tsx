@@ -28,7 +28,7 @@ const GardenerCalendar: React.FC = () => {
         pt={7}
         pb={25}
         w="100%"
-        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
+        bg={useColorModeValue("#e1e6e1", "#192b25")}
       >
         <Heading as="h2">{t("calendar.winter_end.title")}</Heading>
         <Divider mt={5} mb={5} />
@@ -110,7 +110,7 @@ const GardenerCalendar: React.FC = () => {
         pt={7}
         pb={25}
         w="100%"
-        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
+        bg={useColorModeValue("#e1e6e1", "#192b25")}
       >
         <Heading as="h2">{t("calendar.summer.title")}</Heading>
         <Divider mt={5} mb={5} />
