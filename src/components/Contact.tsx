@@ -17,11 +17,12 @@ const Contacts: React.FC = () => {
   const contacts = t("contacts", { returnObjects: true }) as Contacts;
 
   return (
-    <Box pt="140px">
+    <Box pt="140px" color={useColorModeValue("#485727", "#c5d6a1")}>
       <Box
-        bgImg={"image/gr.jpg"}
-        objectFit="cover"
+        bgImg={"image/ky.jpg"}
+        bgSize="cover"
         bgPosition="center"
+        bgRepeat="no-repeat"
         pt="40px "
         pb="40px"
       >
@@ -37,11 +38,11 @@ const Contacts: React.FC = () => {
           <Stack spacing={4} alignContent="center" w="100" m="auto">
             <Box display="flex" alignItems="center" justifyContent={"center"}>
               <Icon as={FaMapMarkerAlt} w={6} h={6} mr={2} />
-              <Text>{contacts.address}</Text>
+              <Text as="b">{contacts.address}</Text>
             </Box>
             <Box display="flex" alignItems="center" justifyContent={"center"}>
               <Icon as={FaEnvelope} w={6} h={6} mr={2} />
-              <Link href={`mailto:${contacts.email}`} color="blue.500">
+              <Link as="b" href={`mailto:${contacts.email}`} color="blue.500">
                 {contacts.email}
               </Link>
             </Box>
@@ -49,7 +50,9 @@ const Contacts: React.FC = () => {
               <Icon as={FaPhoneAlt} w={6} h={6} mr={2} />
               <Stack spacing={2}>
                 {contacts.phones.map((phone: string, index: number) => (
-                  <Text key={index}>{phone}</Text>
+                  <Text as="b" key={index}>
+                    {phone}
+                  </Text>
                 ))}
               </Stack>
             </Box>

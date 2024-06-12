@@ -27,22 +27,43 @@ const AboutUs: React.FC = () => {
       color={useColorModeValue("#485727", "#c5d6a1")}
     >
       <VStack spacing={8} align="start">
-        <Heading
-          as="h1"
-          size="2xl"
-          color={useColorModeValue("green.600", "green.200")}
+        <Box
+          bgImg={"image/lav.jpg"}
+          bgSize="cover"
+          bgPosition="center"
+          bgRepeat="no-repeat"
+          pt="40px "
+          pb="40px"
+          w="100%"
         >
-          {t("about_us.title")}
-        </Heading>
-        <Box>
-          <Image
-            borderRadius="lg"
-            src="./image/logo.jpg"
-            alt="Serhiy and his team"
-            objectFit="cover"
-            w="50%"
-            h="auto"
-          />
+          <Box
+            w="100%"
+            p={"6vw"}
+            boxShadow="sm"
+            bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+            justifyContent='center'
+            alignContent={'center'}
+          >
+            <Heading textAlign={'center'}
+              as="h1"
+              size="2xl"
+              color={useColorModeValue("green.600", "green.200")}
+            >
+              {t("about_us.title")}
+            </Heading>
+            <Box textAlign={'center'} mt={'3vw'} minH={'70px'}>
+              <Image
+                m={'auto'}
+                w="10vw"
+                borderRadius="lg"
+                src="./image/logo.jpg"
+                alt="Serhiy and his team"
+                objectFit="cover"
+                
+                h="auto"
+              />
+            </Box>
+          </Box>
         </Box>
         <Box
           bg={useColorModeValue("gray.100", "gray.700")}

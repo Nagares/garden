@@ -63,18 +63,52 @@ function Content() {
             </Text>
           </Box>
           <Divider mt={5} mb={5} />
+          <Box
+            w="100%"
+            h="30vw"
+            bgImg={"image/home.jpg"}
+            bgImage="url('image/agr.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+          <Divider mt={5} mb={5} />
+          <CalendarComponent />
+          <Divider mt={10} mb={5} />
+          <Box
+            w="100%"
+            bg={useColorModeValue("whiteAlpha.700", "blackAlpha.700")}
+          >
+            <Heading
+              as="h3"
+              size="3xl"
+              color={useColorModeValue("green.600", "green.200")}
+            >
+              {t("wedo.our_works")}
+            </Heading>
+          </Box>
+          <Divider mt={5} mb={5} />
+
           <BeforeAfter
             beforeImage={"image/2b.jpg"}
             afterImage={"image/2a.jpg"}
           />
-          <Divider mt={10} mb={5} />
-          <CalendarComponent />
-          <Divider mt={10} mb={5} />
+          <Divider mt={5} mb={5} />
           <BeforeAfter
             beforeImage={"image/1b.jpg"}
             afterImage={"image/1a.jpg"}
           />
-          <Divider mt={10} mb={5} />
+          <Divider mt={5} mb={5} />
+          <Box
+            w="100%"
+            h="30vw"
+            bgImg={"image/home.jpg"}
+            bgImage="url('image/colo.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+          <Divider mt={5} mb={5} />
         </Grid>
       </Box>
     </Box>

@@ -102,14 +102,15 @@ const ServicesPage: React.FC = () => {
         <Box
           w="100%"
           textAlign="center"
-          id="contacts"
           bgImg={"image/gr.jpg"}
-          objectFit="cover"
+          bgSize="cover"
           bgPosition="center"
+          bgRepeat="no-repeat"
         >
           <Box
             w="100%"
-            p={"10"}
+            pt="7vw"
+            pb="7vw"
             boxShadow="sm"
             bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
           >
