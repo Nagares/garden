@@ -24,7 +24,12 @@ const GardenerCalendar: React.FC = () => {
     <Box w="100%">
       <Heading>{t("calendar.title")}</Heading>
       <Divider mt={5} mb={5} />
-      <VStack w="100%">
+      <VStack
+        pt={7}
+        pb={25}
+        w="100%"
+        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
+      >
         <Heading as="h2">{t("calendar.winter_end.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
@@ -54,16 +59,10 @@ const GardenerCalendar: React.FC = () => {
           />
         </HStack>
       </VStack>
-      <Divider mt={5} mb={5} />
-      <VStack
-        pt={7}
-        pb={25}
-        w="100%"
-        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
-      >
-        <Heading as="h2" pb={15}>
-          {t("calendar.spring.title")}
-        </Heading>
+      <Divider mt={10} mb={5} />
+      <VStack w="100%">
+        <Heading as="h2">{t("calendar.spring.title")}</Heading>
+        <Divider mt={5} mb={5} />
         <HStack
           spacing="3vw"
           alignItems={"stretch"}
@@ -106,8 +105,13 @@ const GardenerCalendar: React.FC = () => {
           />
         </HStack>
       </VStack>
-      <Divider mt={5} mb={5} />
-      <VStack w="100%">
+      <Divider mt={10} mb={5} />
+      <VStack
+        pt={7}
+        pb={25}
+        w="100%"
+        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
+      >
         <Heading as="h2">{t("calendar.summer.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
@@ -148,16 +152,10 @@ const GardenerCalendar: React.FC = () => {
           />
         </HStack>
       </VStack>
-      <Divider mb={5} />
-      <VStack
-        pt={7}
-        pb={25}
-        w="100%"
-        bg={useColorModeValue("rgb(225, 230, 225)", "#2c4c40")}
-      >
-        <Heading as="h2" pb={15}>
-          {t("calendar.autumn.title")}
-        </Heading>
+      <Divider mt={10} mb={5} />
+      <VStack w="100%">
+        <Heading as="h2">{t("calendar.autumn.title")}</Heading>
+        <Divider mt={5} mb={5} />
         <HStack
           spacing="3vw"
           alignItems={"stretch"}

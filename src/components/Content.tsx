@@ -23,24 +23,33 @@ function Content() {
       textAlign="center"
       fontSize="xl"
       color={useColorModeValue("#485727", "#c5d6a1")}
-      pt={"140px"}
+      pt={"100px"}
     >
       <Grid>
-        <Heading as="h1" size="3xl">
-          {t("header.title")}
-        </Heading>
-        <Divider mt={5} mb={5} />
-        <Box position="static">
-          <Image
-            borderRadius="md"
-            src={"image/"}
-            alt="img"
-            objectFit="cover"
-            h="300px"
-          />
+        <Box
+          bgImg={"image/home.jpg"}
+          bgImage="url('image/lawn.jpg')"
+          bgSize="cover"
+          bgPosition="center"
+          bgRepeat="no-repeat"
+          mb={5}
+        >
+          <Box
+            w="100%"
+            p={"10vw"}
+            boxShadow="sm"
+            bg={useColorModeValue("whiteAlpha.700", "blackAlpha.700")}
+          >
+            <Heading as="h1" size="3xl">
+              {t("header.title")}
+            </Heading>
+          </Box>
         </Box>
+        <Divider mt={5} mb={5} />
+
         <Heading as="h2">{t("services.title")}</Heading>
-        <Box mt="3">
+        <Divider mt={5} mb={5} />
+        <Box mt="3" mb={5}>
           <Text fontSize="xl" w="65%" margin={"auto"} textAlign={["justify"]}>
             {t("services.pruning") + " "}
             {t("services.pest_control") + " "}
@@ -49,10 +58,13 @@ function Content() {
             {t("services.other")}
           </Text>
         </Box>
-        <BeforeAfter beforeImage={"image/2b.jpg"} afterImage={"image/2a.jpg"} />
         <Divider mt={5} mb={5} />
+        <BeforeAfter beforeImage={"image/2b.jpg"} afterImage={"image/2a.jpg"} />
+        <Divider mt={10} mb={5} />
         <CalendarComponent />
+        <Divider mt={10} mb={5} />
         <BeforeAfter beforeImage={"image/1b.jpg"} afterImage={"image/1a.jpg"} />
+        <Divider mt={10} mb={5} />
         <Contact />
         <Footer />
       </Grid>
