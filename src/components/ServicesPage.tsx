@@ -4,19 +4,20 @@ import {
   Heading,
   VStack,
   Text,
-  Stack,
-  HStack,
+  useColorModeValue,
   Divider,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 const ServiceItem = ({ title, items }: { title: string; items: string[] }) => (
-  <VStack align="start" spacing={3}>
-    <Heading as="h4" size="md">
+  <VStack align="start" spacing={3} py={4}>
+    <Heading as="h4" size="md" borderBottom="2px solid" pb={2} mb={2}>
       {title}
     </Heading>
     {items.map((item, index) => (
-      <Text key={index}>{item}</Text>
+      <Text key={index} pl={4} _before={{ content: '"• "', color: "green.500" }}>
+        {item}
+      </Text>
     ))}
   </VStack>
 );
@@ -91,30 +92,70 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <Box p={8}>
+    <Box pt="140px" color={useColorModeValue("#485727", "#c5d6a1")} mb="8">
       <VStack spacing={8} align="start">
-        <Heading as="h2">{t("services.free_consultation")}</Heading>
-        <Heading as="h2">{t("services.maintenance")}</Heading>
+        <Box
+          w="100%"
+          textAlign="center"
+          id="contacts"
+          bgImg={"image/gr.jpg"}
+          objectFit="cover"
+          bgPosition="center"
+        >
+          <Box
+            w="100%"
+            p={"10"}
+            boxShadow="sm"
+            bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+          >
+            <Heading as="h2" size="lg" mt="2vw"  color={useColorModeValue("green.600", "green.200")}>
+              {t("services.free_consultation")}
+            </Heading>
+
+            <Heading as="h3" size="md" mt="2vw" mb="2vw">
+              {t("services.maintenance")}
+            </Heading>
+          </Box>
+        </Box>
 
         <Divider />
-
-        <Heading as="h3">{t("services.garden.title")}</Heading>
-        {gardenServices.map((service, index) => (
-          <ServiceItem
-            key={index}
-            title={service.title}
-            items={service.items}
-          />
-        ))}
-
-        <Divider />
-
-        <Heading as="h3">{t("services.lawn.title")}</Heading>
-        <VStack align="start" spacing={3}>
-          {lawnServices.map((service, index) => (
-            <Text key={index}>{service}</Text>
+        <Box w="60vw" textAlign="center" m="auto">
+          <Heading
+            as="h3"
+            size="lg"
+            color={useColorModeValue("green.600", "green.200")}
+          >
+            {t("services.garden.title")}
+          </Heading>
+          {gardenServices.map((service, index) => (
+            <ServiceItem
+              key={index}
+              title={service.title}
+              items={service.items}
+            />
           ))}
-        </VStack>
+
+          <Divider />
+
+          <Heading
+            as="h3"
+            size="lg"
+            color={useColorModeValue("green.600", "green.200")}
+          >
+            {t("services.lawn.title")}
+          </Heading>
+          <VStack align="start" spacing={3} py={4}>
+            {lawnServices.map((service, index) => (
+              <Text
+                key={index}
+                pl={4}
+                _before={{ content: '"• "', color: "green.500" }}
+              >
+                {service}
+              </Text>
+            ))}
+          </VStack>
+        </Box>
       </VStack>
     </Box>
   );

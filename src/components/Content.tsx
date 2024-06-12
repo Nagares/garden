@@ -9,8 +9,6 @@ import {
 
 import { useTranslation } from "react-i18next";
 import CalendarComponent from "./CalendarComponent";
-import Contact from "./Contact";
-import Footer from "./Footer";
 import BeforeAfter from "./BeforeAfterProps";
 
 function Content() {
@@ -22,7 +20,7 @@ function Content() {
       textAlign="center"
       fontSize="xl"
       color={useColorModeValue("#485727", "#c5d6a1")}
-      pt={"100px"}
+      pt={"140px"}
     >
       <Grid>
         <Box
@@ -46,15 +44,15 @@ function Content() {
         </Box>
         <Divider mt={5} mb={5} />
 
-        <Heading as="h2">{t("services.title")}</Heading>
+        <Heading as="h2"  color={useColorModeValue("green.600", "green.200")}>{t("wedo.title")}</Heading>
         <Divider mt={5} mb={5} />
         <Box mt="3" mb={5}>
-          <Text fontSize="xl" w="65%" margin={"auto"} textAlign={["justify"]}>
-            {t("services.pruning") + " "}
-            {t("services.pest_control") + " "}
-            {t("services.scarification") + " "}
-            {t("services.lawn_mowing") + " "}
-            {t("services.other")}
+          <Text fontSize="xl" w="80vw" margin={"auto"} textAlign={["justify"]}>
+            {t("wedo.pruning") + " "}
+            {t("wedo.pest_control") + " "}
+            {t("wedo.scarification") + " "}
+            {t("wedo.lawn_mowing") + " "}
+            {t("wedo.other")}
           </Text>
         </Box>
         <Divider mt={5} mb={5} />

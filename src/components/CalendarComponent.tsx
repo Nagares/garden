@@ -22,7 +22,7 @@ const GardenerCalendar: React.FC = () => {
 
   return (
     <Box w="100%">
-      <Heading>{t("calendar.title")}</Heading>
+      <Heading  color={useColorModeValue("green.600", "green.200")}>{t("calendar.title")}</Heading>
       <Divider mt={5} mb={5} />
       <VStack
         pt={7}
@@ -30,7 +30,7 @@ const GardenerCalendar: React.FC = () => {
         w="100%"
         bg={useColorModeValue("#e1e6e1", "#192b25")}
       >
-        <Heading as="h2">{t("calendar.winter_end.title")}</Heading>
+        <Heading as="h2" >{t("calendar.winter_end.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
           spacing="3vw"

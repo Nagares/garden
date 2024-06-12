@@ -9,7 +9,7 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBox } from "react-icons/fa";
 
 const Contacts: React.FC = () => {
   const { t } = useTranslation();
@@ -18,16 +18,21 @@ const Contacts: React.FC = () => {
 
   return (
     <Box
-      id="contacts"
+       pt="140px"
+    >
+    <Box
       bgImg={"image/gr.jpg"}
       objectFit="cover"
       bgPosition="center"
+       pt="40px "
+       pb="40px"
     >
       <Box
         w="100%"
         p={"5vw"}
         boxShadow="sm"
         bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
+
       >
         <Heading as="h3" size="lg" mb={4} textAlign="center">
           {contacts.title}
@@ -53,6 +58,7 @@ const Contacts: React.FC = () => {
           </Box>
         </Stack>
       </Box>
+    </Box>
     </Box>
   );
 };
