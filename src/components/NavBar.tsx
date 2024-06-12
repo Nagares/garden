@@ -71,7 +71,7 @@ const Navbar = () => {
           alignItems={"center"}
           justifyContent={"space-between"}
           px={4}
-          pl='5vw'
+          pl="5vw"
         >
           <IconButton
             size={"md"}
@@ -81,10 +81,10 @@ const Navbar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <HStack >
+            <HStack>
               <Box>
                 <Image
-                  src={"image/logo.jpg"}
+                  src={"%PUBLIC_URL%/image/logo.jpg"}
                   alt="After"
                   objectFit="cover"
                   boxSize="35px"

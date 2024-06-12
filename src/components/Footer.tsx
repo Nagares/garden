@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         <Stack spacing={6}>
           <Box textAlign="center">
             <Image
-              src={"image/logo.jpg"}
+              src={"%PUBLIC_URL%/image/logo.jpg"}
               m="auto"
               alt="After"
               objectFit="cover"
