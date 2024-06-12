@@ -26,9 +26,9 @@ import { Link as RouterLink } from "react-router-dom";
 
 const Links = [
   { name: "Home", id: "home" },
+  { name: "Services", id: "services" },
   { name: "Contacts", id: "contacts" },
   { name: "About Us", id: "about-us" },
-  { name: "Services", id: "services" },
 ];
 
 const NavLink = ({

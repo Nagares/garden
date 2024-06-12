@@ -51,7 +51,6 @@ const Footer: React.FC = () => {
             direction={["column", "row"]}
             spacing={8}
             justify="space-around"
-           
           >
             <Box textAlign="center">
               <Icon as={FaMapMarkerAlt} w={6} h={6} mb={2} />

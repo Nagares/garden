@@ -7,7 +7,7 @@
       "phone2": "(067) 461-64-36"
     }
   },
-  "services": {
+  "wedo": {
     "title": "Garden Care Services",
     "pruning": "Pruning of trees and shrubs (shaping, sanitary, rejuvenating, decorative)",
     "pest_control": "Control of diseases and pests. Treatment with fungicides, insecticides",
@@ -155,6 +155,84 @@
   },
   "menu": {
     "home": "Home",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "about-us": "About Us",
+    "services": "Prices"
+  },
+  "services": {
+    "free_consultation": "The first visit, consultation, and cost estimate are free",
+    "maintenance": "Comprehensive maintenance of a 6-acre plot from 4000 UAH per month",
+    "garden": {
+      "title": "Garden",
+      "pruning": {
+        "title": "Tree and shrub pruning (formative, sanitary, rejuvenating, decorative)",
+        "small": "crown diameter up to 1m per piece 50 UAH.",
+        "medium": "crown diameter up to 2m per piece 200 UAH.",
+        "large": "crown diameter up to 4m per piece 400 UAH.",
+        "extra_large": "over 4m per piece negotiable",
+        "conifers": "conifers, thuja per piece negotiable"
+      },
+      "hedge_pruning": {
+        "title": "Hedge pruning",
+        "up_to_3m": "height up to 3m per linear meter 100 UAH.",
+        "up_to_5m": "height up to 5m per linear meter 150 UAH.",
+        "over_5m": "height over 5m per linear meter negotiable."
+      },
+      "treatment": {
+        "title": "Treatment and prevention of frostbite and bark damage",
+        "cleaning": "cleaning the damaged area, disinfection, applying a protective layer per place from 100 UAH.",
+        "whitening": "trunk whitening per piece from 50 UAH."
+      },
+      "pest_control": {
+        "title": "Pest and disease control",
+        "spraying": "Treatment with fungicides, insecticides (including the cost of drugs): spraying 10L tank 400 UAH.",
+        "root_treatment": "Root treatment 10L 250 UAH."
+      },
+      "fertilization": {
+        "title": "Fertilization (including the cost of drugs)",
+        "spraying": "spraying 10L tank 400 UAH.",
+        "root_liquid": "Root treatment with solutions 10L 250 UAH.",
+        "root_dry": "Root treatment with dry mixtures (excluding the cost of drugs) 5 UAH per m2"
+      },
+      "planting": {
+        "title": "Planting saplings",
+        "saplings": "1-2 years old per piece from 200 UAH."
+      },
+      "mulching": {
+        "title": "Soil mulching",
+        "bark": "with bark per m2 30 UAH."
+      },
+      "grafting": {
+        "title": "Tree grafting",
+        "cuttings": "by cuttings per piece 50 UAH."
+      }
+    },
+    "lawn": {
+      "title": "Lawn",
+      "scarification": "Scarification per 100m2 700 UAH.",
+      "mowing_lawnmower": "Mowing with lawnmower per 100m2 350 UAH.",
+      "mowing_trimmer": "Mowing lawn edges with trimmer per linear meter 10 UAH.",
+      "seeding": "Grass seeding (excluding seed cost) per 100m2 700 UAH.",
+      "fertilization": "Fertilization per 100m2 100 UAH.",
+      "weed_control_herbicides": "Weed control with herbicides per 100m2 450 UAH.",
+      "weed_control_manual": "Manual weed removal per 100m2 from 300 UAH.",
+      "grass_removal": "Grass removal from the plot per 210L bag 100 UAH."
+    }
+  },
+  "about_us": {
+    "title": "About Us",
+    "introduction": {
+      "title": "My name is Sergey",
+      "description": "My team and I have been providing gardening services for five years. Our main focus is comprehensive care for home gardens. This includes almost all types of work related to the care of gardens, lawns, and flowerbeds. Each plant requires an individual approach that takes into account many factors, such as soil composition and acidity, light level, moisture level, types of fertilizers, knowledge of common pests and diseases for each species, pruning and shaping methods, and much more."
+    },
+    "key_factors": {
+      "title": "The key factors for a healthy and well-maintained plot are",
+      "items": [
+        "Planned work with plants.",
+        "Making competent professional decisions.",
+        "High quality of work performed."
+      ],
+      "conclusion": "Adhering to these basic principles allows us to build long-term relationships with our clients, achieving positive results in any issues that arise during the work process."
+    }
   }
 }

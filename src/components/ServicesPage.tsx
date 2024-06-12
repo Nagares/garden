@@ -15,7 +15,12 @@ const ServiceItem = ({ title, items }: { title: string; items: string[] }) => (
       {title}
     </Heading>
     {items.map((item, index) => (
-      <Text key={index} pl={4} _before={{ content: '"• "', color: "green.500" }}>
+      <Text
+        textAlign={"start"}
+        key={index}
+        pl={4}
+        _before={{ content: '"• "', color: "green.500" }}
+      >
         {item}
       </Text>
     ))}
@@ -108,7 +113,12 @@ const ServicesPage: React.FC = () => {
             boxShadow="sm"
             bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
           >
-            <Heading as="h2" size="lg" mt="2vw"  color={useColorModeValue("green.600", "green.200")}>
+            <Heading
+              as="h2"
+              size="lg"
+              mt="2vw"
+              color={useColorModeValue("green.600", "green.200")}
+            >
               {t("services.free_consultation")}
             </Heading>
 
@@ -119,7 +129,7 @@ const ServicesPage: React.FC = () => {
         </Box>
 
         <Divider />
-        <Box w="60vw" textAlign="center" m="auto">
+        <Box w="70vw" textAlign="center" m="auto">
           <Heading
             as="h3"
             size="lg"
@@ -147,6 +157,7 @@ const ServicesPage: React.FC = () => {
           <VStack align="start" spacing={3} py={4}>
             {lawnServices.map((service, index) => (
               <Text
+                textAlign={"start"}
                 key={index}
                 pl={4}
                 _before={{ content: '"• "', color: "green.500" }}

@@ -21,7 +21,7 @@ const LanguageSwitcher: React.FC = () => {
       <MenuButton
         as={Button}
         fontSize="md"
-        mr='1'
+        mr="1"
         color={useColorModeValue("#485727", "#c5d6a1")}
         rightIcon={<span>▼</span>}
       >
