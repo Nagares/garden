@@ -19,7 +19,7 @@ const Contacts: React.FC = () => {
   return (
     <Box
       id="contacts"
-      bgImg={"%PUBLIC_URL%/image/gr.jpg"}
+      bgImg={"image/gr.jpg"}
       objectFit="cover"
       bgPosition="center"
     >

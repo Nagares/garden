@@ -84,7 +84,7 @@ const Navbar = () => {
             <HStack>
               <Box>
                 <Image
-                  src={"%PUBLIC_URL%/image/logo.jpg"}
+                  src={"image/logo.jpg"}
                   alt="After"
                   objectFit="cover"
                   boxSize="35px"

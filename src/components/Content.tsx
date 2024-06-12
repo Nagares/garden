@@ -27,8 +27,8 @@ function Content() {
     >
       <Grid>
         <Box
-          bgImg={"%PUBLIC_URL%/image/home.jpg"}
-          bgImage="url('%PUBLIC_URL%/image/lawn.jpg')"
+          bgImg={"image/home.jpg"}
+          bgImage="url('image/lawn.jpg')"
           bgSize="cover"
           bgPosition="center"
           bgRepeat="no-repeat"
@@ -59,17 +59,11 @@ function Content() {
           </Text>
         </Box>
         <Divider mt={5} mb={5} />
-        <BeforeAfter
-          beforeImage={"%PUBLIC_URL%/image/2b.jpg"}
-          afterImage={"%PUBLIC_URL%/image/2a.jpg"}
-        />
+        <BeforeAfter beforeImage={"image/2b.jpg"} afterImage={"image/2a.jpg"} />
         <Divider mt={10} mb={5} />
         <CalendarComponent />
         <Divider mt={10} mb={5} />
-        <BeforeAfter
-          beforeImage={"%PUBLIC_URL%/image/1b.jpg"}
-          afterImage={"%PUBLIC_URL%/image/1a.jpg"}
-        />
+        <BeforeAfter beforeImage={"image/1b.jpg"} afterImage={"image/1a.jpg"} />
         <Divider mt={10} mb={5} />
         <Contact />
         <Footer />

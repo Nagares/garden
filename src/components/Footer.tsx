@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         <Stack spacing={6}>
           <Box textAlign="center">
             <Image
-              src={"%PUBLIC_URL%/image/logo.jpg"}
+              src={"image/logo.jpg"}
               m="auto"
               alt="After"
               objectFit="cover"
@@ -51,6 +51,7 @@ const Footer: React.FC = () => {
             direction={["column", "row"]}
             spacing={8}
             justify="space-around"
+           
           >
             <Box textAlign="center">
               <Icon as={FaMapMarkerAlt} w={6} h={6} mb={2} />
