@@ -2,7 +2,7 @@ import { ChakraProvider, theme, ThemeConfig } from "@chakra-ui/react";
 import "./App.css";
 import "./i18n";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contacts from "./components/Contact";
 import AboutUs from "./components/AboutUs";
 import ServicesPage from "./components/ServicesPage";
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Router>
+      <BrowserRouter basename="/sgarden">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
         <Footer />
-      </Router>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }

@@ -22,10 +22,9 @@ const AboutUs: React.FC = () => {
   return (
     <Container
       maxW="7xl"
-      w='100%' 
+      w="100%"
       p="0"
       pt="140px"
-     
       color={useColorModeValue("#485727", "#c5d6a1")}
     >
       <VStack spacing={8} align="start">
@@ -43,25 +42,25 @@ const AboutUs: React.FC = () => {
             p={"6vw"}
             boxShadow="sm"
             bg={useColorModeValue("whiteAlpha.800", "blackAlpha.800")}
-            justifyContent='center'
-            alignContent={'center'}
+            justifyContent="center"
+            alignContent={"center"}
           >
-            <Heading textAlign={'center'}
+            <Heading
+              textAlign={"center"}
               as="h1"
               size="2xl"
               color={useColorModeValue("green.600", "green.200")}
             >
               {t("about_us.title")}
             </Heading>
-            <Box textAlign={'center'} mt={'3vw'} minH={'70px'}>
+            <Box textAlign={"center"} mt={"3vw"} minH={"70px"}>
               <Image
-                m={'auto'}
+                m={"auto"}
                 w="10vw"
                 borderRadius="lg"
-                src="./image/logo.jpg"
+                src={"image/logo.jpg"}
                 alt="Serhiy and his team"
                 objectFit="cover"
-                
                 h="auto"
               />
             </Box>
@@ -69,8 +68,8 @@ const AboutUs: React.FC = () => {
         </Box>
         <Box
           bg={useColorModeValue("gray.100", "gray.700")}
-          ml='7vw'
-          mr='7vw'
+          ml="7vw"
+          mr="7vw"
           p={8}
           borderRadius="lg"
           boxShadow="lg"
@@ -81,9 +80,9 @@ const AboutUs: React.FC = () => {
           <Text fontSize="lg">{t("about_us.introduction.description")}</Text>
         </Box>
         <Box
-          ml='7vw'
-          mr='7vw'
-          mb='3vw'
+          ml="7vw"
+          mr="7vw"
+          mb="3vw"
           bg={useColorModeValue("gray.50", "gray.800")}
           p={8}
           borderRadius="lg"
