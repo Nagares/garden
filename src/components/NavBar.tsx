@@ -22,25 +22,29 @@ import {
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Link as RouterLink } from "react-router-dom";
+import { useActiveContent } from "./Context/ActiveContentContext";
+import  Content  from "./Content";
+import  Contact  from "./Contact";
+import  AboutUs  from "./AboutUs";
+import  ServicesPage  from "./ServicesPage";
+
 
 const Links = [
-  { name: "Home", id: "home" },
-  { name: "Services", id: "services" },
-  { name: "Contacts", id: "contacts" },
-  { name: "About Us", id: "about-us" },
+  { component: <Content/>, id: "home" },
+  { component: <ServicesPage/>, id: "services" },
+  { component: <Contact/>, id: "contacts" },
+  { component: <AboutUs/>, id: "about-us" },
 ];
 
-const NavLink = ({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) => (
+interface NavLinkProps {
+  children:  React.ReactNode;
+  onClick: () => void;
+}
+
+const NavLink = ({ children , onClick }: NavLinkProps) => (
+  
   <Link
-    as={RouterLink}
-    to={href}
+    onClick={onClick}
     px={2}
     py={1}
     rounded={"md"}
@@ -54,6 +58,8 @@ const NavLink = ({
 );
 
 const Navbar = () => {
+  const { setActiveContent } = useActiveContent();
+
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -104,9 +110,7 @@ const Navbar = () => {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <NavLink key={link.id} href={`/${link.id}`}>
-                  {t(`menu.${link.id}`)}
-                </NavLink>
+                <NavLink key={link.id} onClick={()=>setActiveContent(link.component)}>{t(`menu.${link.id}`)}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -142,9 +146,7 @@ const Navbar = () => {
                 <DrawerBody>
                   <Stack as={"nav"} spacing={4}>
                     {Links.map((link) => (
-                      <NavLink key={link.id} href={`/${link.id}`}>
-                        {t(`menu.${link.id}`)}
-                      </NavLink>
+                      <NavLink key={link.id} onClick={()=>setActiveContent(link.component)}>{t(`menu.${link.id}`)}</NavLink>
                     ))}
                   </Stack>
                 </DrawerBody>

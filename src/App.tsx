@@ -2,16 +2,10 @@ import { ChakraProvider, theme, ThemeConfig } from "@chakra-ui/react";
 import "./App.css";
 import "./i18n";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Contacts from "./components/Contact";
-import AboutUs from "./components/AboutUs";
-import ServicesPage from "./components/ServicesPage";
-import Navbar from "./components/NavBar";
-import Home from "./components/Content";
-import Footer from "./components/Footer";
+import Context from "./components/Context/Context";
+
 
 function App() {
-  // set theme configuration
   const config: ThemeConfig = {
     initialColorMode: "system",
     useSystemColorMode: true,
@@ -20,17 +14,7 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <BrowserRouter basename="/sgarden">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/about-us" element={<AboutUs />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <Context />
     </ChakraProvider>
   );
 }
