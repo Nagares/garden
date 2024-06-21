@@ -11,7 +11,14 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { FooterDataProps } from "./Interfaces/FooterDataProps";
+
+interface FooterDataProps {
+  companyName: string;
+  address: string;
+  email: string;
+  phones: string[];
+  copyright: string;
+}
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -20,6 +27,7 @@ const Footer: React.FC = () => {
   return (
     <Box
       as="footer"
+      w="100%"
       bg={useColorModeValue("gray.100", "gray.900")}
       color={useColorModeValue("#485727", "#c5d6a1")}
       py={10}

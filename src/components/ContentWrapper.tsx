@@ -3,7 +3,7 @@ import Navbar from "./NavBar";
 import Footer from "./Footer";
 
 function ContextWrapper() {
-  const { activeContent, setActiveContent } = useActiveContent();
+  const { activeContent } = useActiveContent();
 
   return (
     <>

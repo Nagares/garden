@@ -21,7 +21,7 @@ const AboutUs: React.FC = () => {
 
   return (
     <Container
-      maxW="7xl"
+      maxW="10xl"
       w="100%"
       p="0"
       pt="140px"

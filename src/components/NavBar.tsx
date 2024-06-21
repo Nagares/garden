@@ -27,7 +27,6 @@ import Content from "./Content";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
 import ServicesPage from "./ServicesPage";
-import { NavLinkProps } from "./Interfaces/NavLinkProps";
 
 const Links = [
   { component: <Content />, id: "home" },
@@ -35,6 +34,11 @@ const Links = [
   { component: <Contact />, id: "contacts" },
   { component: <AboutUs />, id: "about-us" },
 ];
+
+interface NavLinkProps {
+  children: React.ReactNode;
+  onClick: () => void;
+}
 
 const NavLink = ({ children, onClick }: NavLinkProps) => (
   <Link

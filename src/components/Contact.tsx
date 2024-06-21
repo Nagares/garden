@@ -18,7 +18,7 @@ const Contacts: React.FC = () => {
   const contacts = t("contacts", { returnObjects: true }) as ContactsProps;
 
   return (
-    <Box pt="140px" color={useColorModeValue("#485727", "#c5d6a1")}>
+    <Box pt="140px" h="70vh" color={useColorModeValue("#485727", "#c5d6a1")}>
       <Box
         bgImg={"image/ky.jpg"}
         bgSize="cover"
