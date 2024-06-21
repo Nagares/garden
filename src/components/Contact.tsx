@@ -10,11 +10,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { ContactsProps } from "./Interfaces/ContactsProps";
 
 const Contacts: React.FC = () => {
   const { t } = useTranslation();
 
-  const contacts = t("contacts", { returnObjects: true }) as Contacts;
+  const contacts = t("contacts", { returnObjects: true }) as ContactsProps;
 
   return (
     <Box pt="140px" color={useColorModeValue("#485727", "#c5d6a1")}>
@@ -64,10 +65,3 @@ const Contacts: React.FC = () => {
 };
 
 export default Contacts;
-
-interface Contacts {
-  title: string;
-  address: string;
-  email: string;
-  phones: string[];
-}

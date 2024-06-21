@@ -8,11 +8,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
-interface BeforeAfterProps {
-  beforeImage: string;
-  afterImage: string;
-}
+import { BeforeAfterProps } from "./Interfaces/BeforeAfterProps";
 
 const BeforeAfter: React.FC<BeforeAfterProps> = ({
   beforeImage,

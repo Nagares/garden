@@ -10,6 +10,7 @@ import {
   VStack,
   Divider,
 } from "@chakra-ui/react";
+import { FeatureProps } from "./Interfaces/FeatureProps";
 
 const GardenerCalendar: React.FC = () => {
   const { t } = useTranslation();
@@ -200,11 +201,6 @@ const GardenerCalendar: React.FC = () => {
 };
 
 export default GardenerCalendar;
-
-interface FeatureProps {
-  title: string;
-  desc: Array<string>;
-}
 
 const Feature: React.FC<FeatureProps> = ({ title, desc }) => {
   return (

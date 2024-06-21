@@ -11,18 +11,11 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
-interface FooterData {
-  companyName: string;
-  address: string;
-  email: string;
-  phones: string[];
-  copyright: string;
-}
+import { FooterDataProps } from "./Interfaces/FooterDataProps";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const footerData = t("footer", { returnObjects: true }) as FooterData;
+  const footerData = t("footer", { returnObjects: true }) as FooterDataProps;
 
   return (
     <Box
