@@ -1,46 +1,104 @@
-# Getting Started with Create Perfect Garden
 
-This project was bootstrapped with [Create Perfect Garden](https://github.com/facebook/create-react-app).
+# 🌸 Garden
 
-## Available Scripts
+Garden is a React application that demonstrates the use of Chakra UI and i18next for creating a multilingual interface. This is my first project where I implemented language switching.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🌐 Support for multiple languages using i18next
+- 💅 Styling with Chakra UI
+- 🔄 Animations with Framer Motion
+- 🔗 Routing with React Router DOM
 
-Runs the app in the development mode.\
+## 🛠 Installation and Setup
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Nagares/garden.git
+cd garden
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Application
+
+```bash
+npm start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+.
+├── public
+│   ├── index.html
+│   └── ...
+├── src
+│   ├── components
+│   │   ├── Interfaces
+│   │   │   ├── FooterDataProps.ts
+│   │   │   └── NavLinkProps.ts
+│   │   ├── Footer.tsx
+│   │   ├── NavBar.tsx
+│   │   └── ...
+│   ├── i18n
+│   │   ├── index.ts
+│   │   └── locales
+│   │       ├── en
+│   │       │   └── translation.json
+│   │       └── ua
+│   │           └── translation.json
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...
+├── package.json
+└── ...
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🌐 Language Switching
 
-### `npm run build`
+The project implements language switching using i18next. To add a new language, create a translation file in `src/i18n/locales` and update the i18next configuration in `src/i18n/index.ts`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example translation file structure:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "welcome": "Welcome",
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Dependencies
 
-### `npm run eject`
+- **Chakra UI**: `@chakra-ui/react`, `@chakra-ui/icons`, `@emotion/react`, `@emotion/styled`
+- **i18next**: `i18next`, `react-i18next`, `i18next-browser-languagedetector`, `i18next-http-backend`
+- **React**: `react`, `react-dom`
+- **React Router**: `react-router-dom`
+- **Framer Motion**: `framer-motion`
+- **TypeScript**: `typescript`, `@types/react`, `@types/react-dom`, `@types/node`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🧪 Scripts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `start`: Start the application in development mode
+- `build`: Build the application for production
+- `test`: Run tests
+- `eject`: Eject Create React App configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🤝 Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you would like to contribute to the project, please fork the repository and submit a pull request. We welcome all your suggestions and improvements!
 
-## Learn More
 
-You can learn more in the [Create Perfect Garden documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
