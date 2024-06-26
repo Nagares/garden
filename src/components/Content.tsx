@@ -10,21 +10,23 @@ import {
 import { useTranslation } from "react-i18next";
 import CalendarComponent from "./CalendarComponent";
 import BeforeAfter from "./BeforeAfterProps";
+import { useNavbarHeight } from "./Context/NavbarHeightContext";
 
 function Content() {
   const { t } = useTranslation();
-
+  const { navbarHeight } = useNavbarHeight();
   return (
-    <Box pt="140px">
+    <Box pt={`${navbarHeight}px`}>
       <Box
+        w="100%"
         id="home"
         textAlign="center"
         fontSize="xl"
         color={useColorModeValue("#485727", "#c5d6a1")}
       >
-        <Grid>
+        <Grid maxW="1200px" m="auto">
           <Box
-            bgImg={"image/home.jpg"}
+         
             bgImage="url('image/lawn.jpg')"
             bgSize="cover"
             bgPosition="center"
@@ -32,16 +34,25 @@ function Content() {
             mb={5}
           >
             <Box
-              w="100%"
-              p={"10vw"}
+              p="5vh"
               boxShadow="sm"
               bg={useColorModeValue("whiteAlpha.700", "blackAlpha.700")}
             >
-              <Heading as="h1" size="3xl">
+              <Heading as="h1" size="4xl">
                 {t("header.title")}
               </Heading>
             </Box>
           </Box>
+          <Box
+            w="100%"
+            h="50vw"
+            minH="320px"
+            bgImg={"image/home.jpg"}
+            bgImage="url('image/ph1.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
           <Divider mt={5} mb={5} />
 
           <Heading as="h2" color={useColorModeValue("green.600", "green.200")}>
@@ -50,8 +61,9 @@ function Content() {
           <Divider mt={5} mb={5} />
           <Box mt="3" mb={5}>
             <Text
+            p='0 5vw'
               fontSize="xl"
-              w="80vw"
+              w="100%"
               margin={"auto"}
               textAlign={["justify"]}
             >
@@ -65,9 +77,9 @@ function Content() {
           <Divider mt={5} mb={5} />
           <Box
             w="100%"
-            h="30vw"
-            bgImg={"image/home.jpg"}
-            bgImage="url('image/agr.jpg')"
+            h="50vw"
+            minH="320px"
+            bgImage="url('image/arg.jpg')"
             bgSize="cover"
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -75,10 +87,7 @@ function Content() {
           <Divider mt={5} mb={5} />
           <CalendarComponent />
           <Divider mt={10} mb={5} />
-          <Box
-            w="100%"
-            bg={useColorModeValue("whiteAlpha.700", "blackAlpha.700")}
-          >
+          <Box w="100%">
             <Heading
               as="h3"
               size="3xl"
@@ -101,8 +110,8 @@ function Content() {
           <Divider mt={5} mb={5} />
           <Box
             w="100%"
-            h="30vw"
-            bgImg={"image/home.jpg"}
+            h="50vw"
+            minH="320px"
             bgImage="url('image/colo.jpg')"
             bgSize="cover"
             bgPosition="center"

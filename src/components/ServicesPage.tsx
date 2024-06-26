@@ -8,7 +8,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
+import { useNavbarHeight } from "./Context/NavbarHeightContext";
 const ServiceItem = ({ title, items }: { title: string; items: string[] }) => (
   <VStack align="start" spacing={3} py={4}>
     <Heading as="h4" size="md" borderBottom="2px solid" pb={2} mb={2}>
@@ -29,7 +29,7 @@ const ServiceItem = ({ title, items }: { title: string; items: string[] }) => (
 
 const ServicesPage: React.FC = () => {
   const { t } = useTranslation();
-
+  const { navbarHeight } = useNavbarHeight();
   const gardenServices = [
     {
       title: t("services.garden.pruning.title"),
@@ -97,8 +97,8 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <Box pt="140px" color={useColorModeValue("#485727", "#c5d6a1")} mb="8">
-      <VStack spacing={8} align="start">
+    <Box pt={`${navbarHeight}px`} color={useColorModeValue("#485727", "#c5d6a1")} mb="8" >
+      <VStack spacing={8} align="start" maxW="1200px" m='auto'>
         <Box
           w="100%"
           textAlign="center"
@@ -130,7 +130,7 @@ const ServicesPage: React.FC = () => {
         </Box>
 
         <Divider />
-        <Box w="70vw" textAlign="center" m="auto">
+        <Box  textAlign="center" m="auto">
           <Heading
             as="h3"
             size="lg"

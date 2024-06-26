@@ -9,11 +9,16 @@ import {
   Container,
   Image,
   useColorModeValue,
+  HStack,
+  Stack,
+  Card,
+  CardBody,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
+import { useNavbarHeight } from "./Context/NavbarHeightContext";
 const AboutUs: React.FC = () => {
   const { t } = useTranslation();
+  const { navbarHeight } = useNavbarHeight();
 
   const keyFactors: string[] = t("about_us.key_factors.items", {
     returnObjects: true,
@@ -21,10 +26,10 @@ const AboutUs: React.FC = () => {
 
   return (
     <Container
-      maxW="10xl"
+      maxW="1200px"
       w="100%"
       p="0"
-      pt="140px"
+      pt={`${navbarHeight}px`}
       color={useColorModeValue("#485727", "#c5d6a1")}
     >
       <VStack spacing={8} align="start">
@@ -33,8 +38,6 @@ const AboutUs: React.FC = () => {
           bgSize="cover"
           bgPosition="center"
           bgRepeat="no-repeat"
-          pt="40px "
-          pb="40px"
           w="100%"
         >
           <Box
@@ -53,55 +56,74 @@ const AboutUs: React.FC = () => {
             >
               {t("about_us.title")}
             </Heading>
-            <Box textAlign={"center"} mt={"3vw"} minH={"70px"}>
-              <Image
-                m={"auto"}
-                w="10vw"
-                borderRadius="lg"
-                src={"image/logo.jpg"}
-                alt="Serhiy and his team"
-                objectFit="cover"
-                h="auto"
-              />
-            </Box>
           </Box>
         </Box>
-        <Box
-          bg={useColorModeValue("gray.100", "gray.700")}
-          ml="7vw"
-          mr="7vw"
-          p={8}
-          borderRadius="lg"
-          boxShadow="lg"
-        >
-          <Heading as="h2" size="xl" mb={4}>
-            {t("about_us.introduction.title")}
-          </Heading>
-          <Text fontSize="lg">{t("about_us.introduction.description")}</Text>
-        </Box>
-        <Box
-          ml="7vw"
-          mr="7vw"
+
+        <Card
+          direction={{ base: "column-reverse", sm: "row" }}
+          
           mb="3vw"
-          bg={useColorModeValue("gray.50", "gray.800")}
-          p={8}
+          bg={useColorModeValue("gray.100", "gray.700")}
+          borderRadius="lg"
+          boxShadow="lg"
+          
+        >
+          <Stack w="100%">
+            <CardBody p="5vw"  color={useColorModeValue("#485727", "#c5d6a1")}>
+              <Heading as="h3" size="lg" mb={4}>
+                {t("about_us.introduction.title")}
+              </Heading>
+              <Text fontSize="lg">
+                {t("about_us.introduction.description")}
+              </Text>
+            </CardBody>
+          </Stack>
+          <Box
+            w="100%"
+            minH="320px"
+            bgImage="url('image/ab1.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            borderRadius="lg"
+          ></Box>
+        </Card>
+        <Card
+          direction={{ base: "column", sm: "row" }}
+          
+          mb="3vw"
+          bg={useColorModeValue("gray.100", "gray.700")}
           borderRadius="lg"
           boxShadow="lg"
         >
-          <Heading as="h3" size="lg" mb={4}>
-            {t("about_us.key_factors.title")}
-          </Heading>
-          <List spacing={3}>
-            {keyFactors.map((item, index) => (
-              <ListItem key={index} fontSize="lg">
-                {item}
-              </ListItem>
-            ))}
-          </List>
-          <Text fontSize="lg" mt={4}>
-            {t("about_us.key_factors.conclusion")}
-          </Text>
-        </Box>
+          <Box
+            w="100%"
+            minH="320px"
+            bgImage="url('image/ab2.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            borderRadius="lg"
+          ></Box>
+
+          <Stack>
+            <CardBody p="5vw"  color={useColorModeValue("#485727", "#c5d6a1")}>
+              <Heading as="h3" size="lg" mb={4}>
+                {t("about_us.key_factors.title")}
+              </Heading>
+              <List spacing={3}>
+                {keyFactors.map((item, index) => (
+                  <ListItem key={index} fontSize="lg">
+                    {item}
+                  </ListItem>
+                ))}
+              </List>
+              <Text fontSize="lg" mt={4}>
+                {t("about_us.key_factors.conclusion")}
+              </Text>
+            </CardBody>
+          </Stack>
+        </Card>
       </VStack>
     </Container>
   );

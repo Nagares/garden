@@ -27,16 +27,16 @@ const GardenerCalendar: React.FC = () => {
       <Divider mt={5} mb={5} />
       <VStack
         pt={7}
-        pb={25}
         w="100%"
         bg={useColorModeValue("#e1e6e1", "#192b25")}
       >
         <Heading as="h2">{t("calendar.winter_end.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
-          spacing="3vw"
+          spacing="2vw"
           alignItems={"stretch"}
           flexDirection={flexDirection}
+          p="0 2vw"
         >
           <Feature
             title={t("calendar.winter_end.garden.title")}
@@ -59,15 +59,28 @@ const GardenerCalendar: React.FC = () => {
             ]}
           />
         </HStack>
+        <HStack w="100%">
+          <Box
+            mt={5}
+            w="100%"
+            h="50vw"
+            minH="320px"
+            bgImage="url('image/lav2.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+        </HStack>
       </VStack>
       <Divider mt={10} mb={5} />
       <VStack w="100%">
         <Heading as="h2">{t("calendar.spring.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
-          spacing="3vw"
+          spacing="2vw"
           alignItems={"stretch"}
           flexDirection={flexDirection}
+          p="0 2vw"
         >
           <Feature
             title={t("calendar.spring.garden.title")}
@@ -105,18 +118,30 @@ const GardenerCalendar: React.FC = () => {
             ]}
           />
         </HStack>
+        <HStack w="100%">
+          <Box
+            mt={5}
+            w="100%"
+            h="40vw"
+            minH="320px"
+            bgImage="url('image/gr2.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+        </HStack>
       </VStack>
       <Divider mt={10} mb={5} />
       <VStack
         pt={7}
-        pb={25}
         w="100%"
         bg={useColorModeValue("#e1e6e1", "#192b25")}
       >
         <Heading as="h2">{t("calendar.summer.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
-          spacing="3vw"
+          spacing="2vw"
+          p="0 2vw"
           alignItems={"stretch"}
           flexDirection={flexDirection}
         >
@@ -152,13 +177,26 @@ const GardenerCalendar: React.FC = () => {
             ]}
           />
         </HStack>
+        <HStack w="100%">
+          <Box
+            mt={5}
+            w="100%"
+            h="50vw"
+            minH="320px"
+            bgImage="url('image/ph2.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+        </HStack>
       </VStack>
       <Divider mt={10} mb={5} />
       <VStack w="100%">
         <Heading as="h2">{t("calendar.autumn.title")}</Heading>
         <Divider mt={5} mb={5} />
         <HStack
-          spacing="3vw"
+          spacing="2vw"
+          p="0 2vw"
           alignItems={"stretch"}
           flexDirection={flexDirection}
         >
@@ -195,6 +233,18 @@ const GardenerCalendar: React.FC = () => {
             ]}
           />
         </HStack>
+        <HStack w="100%">
+          <Box
+            mt={5}
+            w="100%"
+            h="50vw"
+            minH="320px"
+            bgImage="url('image/ky.jpg')"
+            bgSize="cover"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+          ></Box>
+        </HStack>
       </VStack>
     </Box>
   );
@@ -205,7 +255,8 @@ export default GardenerCalendar;
 const Feature: React.FC<FeatureProps> = ({ title, desc }) => {
   return (
     <Box
-      p={"5vw"}
+      p={"3vh"}
+      minW="300px"
       boxShadow="sm"
       rounded="md"
       bg={useColorModeValue("gray.50", "gray.900")}

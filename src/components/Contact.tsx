@@ -11,21 +11,25 @@ import {
 } from "@chakra-ui/react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { ContactsProps } from "./Interfaces/ContactsProps";
-
+import { useNavbarHeight } from "./Context/NavbarHeightContext";
 const Contacts: React.FC = () => {
+  
   const { t } = useTranslation();
 
   const contacts = t("contacts", { returnObjects: true }) as ContactsProps;
+  const { navbarHeight } = useNavbarHeight();
+
 
   return (
-    <Box pt="140px" h="70vh" color={useColorModeValue("#485727", "#c5d6a1")}>
+    <Box pt={`${navbarHeight}px`} h="100vh" color={useColorModeValue("#485727", "#c5d6a1")} >
       <Box
-        bgImg={"image/ky.jpg"}
+        bgImg={"image/lawn2.jpg"}
         bgSize="cover"
         bgPosition="center"
         bgRepeat="no-repeat"
-        pt="40px "
-        pb="40px"
+        h='100%'
+        maxW="1200px"
+        m='auto'
       >
         <Box
           w="100%"

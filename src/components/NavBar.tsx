@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -27,6 +27,7 @@ import Content from "./Content";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
 import ServicesPage from "./ServicesPage";
+import { useNavbarHeight } from "./Context/NavbarHeightContext";
 
 const Links = [
   { component: <Content />, id: "home" },
@@ -37,12 +38,14 @@ const Links = [
 
 interface NavLinkProps {
   children: React.ReactNode;
+  href: string;
   onClick: () => void;
 }
 
-const NavLink = ({ children, onClick }: NavLinkProps) => (
+const NavLink = ({ children,href, onClick }: NavLinkProps) => (
   <Link
     onClick={onClick}
+    href={href}
     px={2}
     py={1}
     rounded={"md"}
@@ -57,7 +60,8 @@ const NavLink = ({ children, onClick }: NavLinkProps) => (
 
 const Navbar = () => {
   const { setActiveContent } = useActiveContent();
-
+  const navRef = useRef<HTMLDivElement>(null);
+  const { setNavbarHeight } = useNavbarHeight();
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -65,10 +69,16 @@ const Navbar = () => {
     base: "column",
     md: "row",
   });
+  useEffect(() => {
+    if (navRef.current) {
+      setNavbarHeight(navRef.current.clientHeight);
+    }
+  }, [navRef, setNavbarHeight, flexDirection]);
 
   return (
     <>
       <Box
+        ref={navRef}
         bg={useColorModeValue("gray.100", "gray.900")}
         color={useColorModeValue("#485727", "#c5d6a1")}
         position="fixed"
@@ -88,6 +98,7 @@ const Navbar = () => {
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
+            mr='10px'
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack>
@@ -110,6 +121,7 @@ const Navbar = () => {
               {Links.map((link) => (
                 <NavLink
                   key={link.id}
+                  href="#"
                   onClick={() => setActiveContent(link.component)}
                 >
                   {t(`menu.${link.id}`)}
@@ -151,7 +163,8 @@ const Navbar = () => {
                     {Links.map((link) => (
                       <NavLink
                         key={link.id}
-                        onClick={() => setActiveContent(link.component)}
+                         href="#"
+                        onClick={() =>{ setActiveContent(link.component);onClose()}}
                       >
                         {t(`menu.${link.id}`)}
                       </NavLink>
