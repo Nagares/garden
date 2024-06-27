@@ -10,8 +10,16 @@ import {
 import { useTranslation } from "react-i18next";
 import { useNavbarHeight } from "./Context/NavbarHeightContext";
 const ServiceItem = ({ title, items }: { title: string; items: string[] }) => (
-  <VStack align="start" spacing={3} py={4}>
-    <Heading as="h4" size="md" borderBottom="2px solid" pb={2} mb={2}>
+  <VStack align="start" spacing={3} py={4} m={"0 5vw"}>
+    <Heading
+      as="h4"
+      size="md"
+      alignSelf={"start"}
+      textAlign={"start"}
+      borderBottom="2px solid"
+      pb={2}
+      mb={2}
+    >
       {title}
     </Heading>
     {items.map((item, index) => (
@@ -97,8 +105,12 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <Box pt={`${navbarHeight}px`} color={useColorModeValue("#485727", "#c5d6a1")} mb="8" >
-      <VStack spacing={8} align="start" maxW="1200px" m='auto'>
+    <Box
+      pt={`${navbarHeight}px`}
+      color={useColorModeValue("#485727", "#c5d6a1")}
+      mb="8"
+    >
+      <VStack spacing={8} align="start" maxW="1200px" m="auto">
         <Box
           w="100%"
           textAlign="center"
@@ -130,7 +142,7 @@ const ServicesPage: React.FC = () => {
         </Box>
 
         <Divider />
-        <Box  textAlign="center" m="auto">
+        <Box textAlign="center" m="auto">
           <Heading
             as="h3"
             size="lg"
@@ -155,7 +167,7 @@ const ServicesPage: React.FC = () => {
           >
             {t("services.lawn.title")}
           </Heading>
-          <VStack align="start" spacing={3} py={4}>
+          <VStack align="start" spacing={3} py={4} m={"0 5vw"}>
             {lawnServices.map((service, index) => (
               <Text
                 textAlign={"start"}

@@ -42,7 +42,7 @@ interface NavLinkProps {
   onClick: () => void;
 }
 
-const NavLink = ({ children,href, onClick }: NavLinkProps) => (
+const NavLink = ({ children, href, onClick }: NavLinkProps) => (
   <Link
     onClick={onClick}
     href={href}
@@ -98,7 +98,7 @@ const Navbar = () => {
             aria-label={"Open Menu"}
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
-            mr='10px'
+            mr="10px"
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack>
@@ -163,8 +163,11 @@ const Navbar = () => {
                     {Links.map((link) => (
                       <NavLink
                         key={link.id}
-                         href="#"
-                        onClick={() =>{ setActiveContent(link.component);onClose()}}
+                        href="#"
+                        onClick={() => {
+                          setActiveContent(link.component);
+                          onClose();
+                        }}
                       >
                         {t(`menu.${link.id}`)}
                       </NavLink>

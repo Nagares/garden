@@ -13,23 +13,25 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { ContactsProps } from "./Interfaces/ContactsProps";
 import { useNavbarHeight } from "./Context/NavbarHeightContext";
 const Contacts: React.FC = () => {
-  
   const { t } = useTranslation();
 
   const contacts = t("contacts", { returnObjects: true }) as ContactsProps;
   const { navbarHeight } = useNavbarHeight();
 
-
   return (
-    <Box pt={`${navbarHeight}px`} h="100vh" color={useColorModeValue("#485727", "#c5d6a1")} >
+    <Box
+      pt={`${navbarHeight}px`}
+      h="100vh"
+      color={useColorModeValue("#485727", "#c5d6a1")}
+    >
       <Box
         bgImg={"image/lawn2.jpg"}
         bgSize="cover"
         bgPosition="center"
         bgRepeat="no-repeat"
-        h='100%'
+        h="100%"
         maxW="1200px"
-        m='auto'
+        m="auto"
       >
         <Box
           w="100%"
