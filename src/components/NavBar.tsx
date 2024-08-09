@@ -148,8 +148,16 @@ const Navbar = () => {
           bg={useColorModeValue("white", "gray.800")}
           flexDirection={flexDirection}
         >
-          <Box>(095) 626-61-84</Box>
-          <Box>(067) 461-64-36</Box>
+          <Box>
+            <Link href="tel:+380956266184" color="teal.500" fontSize="lg">
+              (095) 626-61-84
+            </Link>
+          </Box>
+          <Box>
+            <Link href="tel:+380674616436" color="teal.500" fontSize="lg">
+              (067) 461-64-36
+            </Link>
+          </Box>
         </HStack>
 
         {isOpen ? (
