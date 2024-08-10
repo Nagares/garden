@@ -38,7 +38,7 @@ function Content() {
               boxShadow="sm"
               bg={useColorModeValue("whiteAlpha.700", "blackAlpha.700")}
             >
-              <Heading as="h1" size="4xl">
+              <Heading as="h1"  size={{ base: "2xl", md: "4xl" }} >
                 {t("header.title")}
               </Heading>
             </Box>
@@ -55,8 +55,9 @@ function Content() {
           ></Box>
           <Divider mt={5} mb={5} />
 
-          <Heading as="h2" color={useColorModeValue("green.600", "green.200")}>
+          <Heading as="h2" color={useColorModeValue("green.600", "green.200")} size={{ base: "2xl", md: "3xl" }}>
             {t("wedo.title")}
+            
           </Heading>
           <Divider mt={5} mb={5} />
           <Box mt="3" mb={5}>
@@ -90,7 +91,7 @@ function Content() {
           <Box w="100%">
             <Heading
               as="h3"
-              size="3xl"
+              size={{ base: "2xl", md: "3xl" }}
               color={useColorModeValue("green.600", "green.200")}
             >
               {t("wedo.our_works")}

@@ -31,8 +31,14 @@ const Footer: React.FC = () => {
       bg={useColorModeValue("gray.100", "gray.900")}
       color={useColorModeValue("#485727", "#c5d6a1")}
       py={10}
+      
     >
-      <Box maxW="1200px" mx="auto" px={6}>
+      <Box
+      
+        maxW={ "1200px" }
+        mx="auto"
+        px={6}
+      >
         <Stack spacing={6}>
           <Box textAlign="center">
             <Image
@@ -69,7 +75,8 @@ const Footer: React.FC = () => {
               <Icon as={FaPhoneAlt} w={6} h={6} mb={2} />
               <Stack spacing={1}>
                 {footerData.phones.map((phone, index) => (
-                  <Text key={index}>{phone}</Text>
+                  
+                  <Link href={`tel:${phone}`} key={index}>{phone}</Link>
                 ))}
               </Stack>
             </Box>
